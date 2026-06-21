@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bio Data Audit Skill | 下载与反馈</title>
+    <meta
+      name="description"
+      content="Bio Data Audit 是一个用于 Codex 的生物数据分析审计 skill，帮助记录输入文件、过滤标准、归一化方法、统计参数、图表来源和风险提示。"
+    >
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="Bio Data Audit 首页">
+        <span class="brand-mark">BDA</span>
+        <span>Bio Data Audit</span>
+      </a>
+      <nav aria-label="页面导航">
+        <a href="#features">功能</a>
+        <a href="#install">安装</a>
+        <a href="#feedback">反馈</a>
+        <a href="#ppt">PPT</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Codex Skill for Auditable Data Analysis</p>
+          <h1>Bio Data Audit</h1>
+          <p class="lead">
+            面向生物、食品发酵、代谢组学、GC-MS、LC-MS 和 Excel/CSV 数据分析的
+            Codex skill。让每次数据处理都留下可复核证据链。
+          </p>
+          <div class="actions">
+            <a class="button primary" data-download href="./downloads/bio-data-audit-skill.zip" download>
+              下载 Skill
+            </a>
+            <a class="button secondary" data-feedback href="#feedback">留言 / 修改意见</a>
+          </div>
+        </div>
+        <div class="audit-card">
+          <div class="card-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <h2>数据处理自检报告</h2>
+          <dl>
+            <div>
+              <dt>原始数据</dt>
+              <dd>data/raw/metabolomics_peak_table.xlsx</dd>
+            </div>
+            <div>
+              <dt>结构检查</dt>
+              <dd>行列数、缺失值、重复行、数值列、常量列</dd>
+            </div>
+            <div>
+              <dt>处理记录</dt>
+              <dd>过滤标准、归一化方法、统计参数、输出文件</dd>
+            </div>
+            <div>
+              <dt>图表来源</dt>
+              <dd>每张图对应来源表、脚本、绘图参数和解释风险</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="section" id="features">
+        <div class="inner">
+          <p class="eyebrow">Core Value</p>
+          <h2>不是让 AI 变透明，而是让数据处理可审计</h2>
+          <div class="feature-grid">
+            <article>
+              <h3>保护原始数据</h3>
+              <p>默认不覆盖 <code>data/raw/</code>，处理结果另存到 results、figures、reports 和 audit。</p>
+            </article>
+            <article>
+              <h3>记录处理过程</h3>
+              <p>生成分析计划、处理日志和自检报告，记录每一步输入、输出、参数和数据规模变化。</p>
+            </article>
+            <article>
+              <h3>自动表格自检</h3>
+              <p>内置脚本检查文件哈希、行列数、缺失值、重复行、数值列、常量列和高缺失列。</p>
+            </article>
+            <article>
+              <h3>追踪图表来源</h3>
+              <p>每张图都说明来源表、生成脚本、绘图参数、标签完整性和解释风险。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section soft" id="install">
+        <div class="inner split">
+          <div>
+            <p class="eyebrow">Install</p>
+            <h2>安装方式</h2>
+            <p>
+              下载压缩包后，把其中的 <code>.agents/skills/bio-data-audit/</code>
+              放到你的 Codex 项目根目录。然后在 Codex 里使用
+              <code>$bio-data-audit</code> 调用。
+            </p>
+          </div>
+          <pre><code>你的项目/
+└── .agents/
+    └── skills/
+        └── bio-data-audit/
+            ├── SKILL.md
+            ├── agents/openai.yaml
+            └── scripts/basic_table_audit.py</code></pre>
+        </div>
+      </section>
+
+      <section class="section" id="feedback">
+        <div class="inner split">
+          <div>
+            <p class="eyebrow">Feedback</p>
+            <h2>留言与修改意见</h2>
+            <p>
+              推荐把反馈入口接到 GitHub Issues、Gitee Issues、腾讯文档、
+              飞书文档或金山文档。听众可以提交使用问题、改进建议、适用场景和错误报告。
+            </p>
+          </div>
+          <div class="feedback-panel">
+            <a class="button primary wide" data-feedback href="https://example.com/replace-with-feedback-link">
+              打开反馈入口
+            </a>
+            <p>
+              当前是占位链接。上线前把 <code>config.js</code> 里的
+              <code>feedbackUrl</code> 改成真实留言链接。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section soft" id="ppt">
+        <div class="inner">
+          <p class="eyebrow">For Slides</p>
+          <h2>PPT 可直接放这段</h2>
+          <div class="quote-box">
+            <p>
+              Bio Data Audit 是一个用于 Codex 的生物数据分析审计 skill。它不试图暴露
+              AI 内部推理，而是要求每次数据处理留下可复核证据：输入文件、行列数、过滤标准、
+              归一化方法、统计参数、图表来源、输出文件和潜在风险。
+            </p>
+            <p>
+              下载与反馈：<strong>把本页网址或二维码放在这里</strong>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Bio Data Audit Skill · Public sharing page</span>
+      <a data-repo href="https://example.com/replace-with-repository-link">项目仓库</a>
+    </footer>
+
+    <script src="./config.js"></script>
+    <script>
+      const cfg = window.BIO_DATA_AUDIT_SITE_CONFIG || {};
+      document.querySelectorAll("[data-feedback]").forEach((link) => {
+        if (cfg.feedbackUrl) link.href = cfg.feedbackUrl;
+      });
+      document.querySelectorAll("[data-repo]").forEach((link) => {
+        if (cfg.repoUrl) link.href = cfg.repoUrl;
+      });
+      document.querySelectorAll("[data-download]").forEach((link) => {
+        if (cfg.downloadUrl) link.href = cfg.downloadUrl;
+      });
+    </script>
+  </body>
+</html>
